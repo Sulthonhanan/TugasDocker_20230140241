@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="container" style="width: 600px;">
+    <h2>Data Mahasiswa</h2>
+
+    <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Jenis Kelamin</th>
+        </tr>
+
+        <tr th:each="u : ${listUser}">
+            <td th:text="${u.nama}"></td>
+            <td th:text="${u.nim}"></td>
+            <td th:text="${u.jenisKelamin}"></td>
+        </tr>
+    </table>
+
+    <a href="/form">➕ Tambah Data</a>
+    <a href="/home">🏠 Kembali</a>
+</div>
+
+</body>
+</html>
